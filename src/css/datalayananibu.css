@@ -1,0 +1,382 @@
+/* RESET DAN DASAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 25px 20px;
+    border-right: 1px solid #e9ecef;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #28a745, #7d2ae8);
+    border-radius: 0 4px 4px 0;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.sidebar h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #28a745, #7d2ae8);
+    border-radius: 2px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 8px;
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar nav li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(125, 42, 232, 0.1));
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.sidebar nav li a:hover::before,
+.sidebar nav li a.active::before {
+    width: 100%;
+}
+
+.sidebar nav li a:hover,
+.sidebar nav li a.active {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.05);
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(40, 167, 69, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar nav li a {
+  text-decoration: none;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+
+.sidebar nav li a:hover,
+.sidebar nav .active a {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT - FIXED: Added margin-left to account for sidebar */
+.main-content {
+  flex: 1;
+  margin-left: 230px; /* Add this to push content away from sidebar */
+  padding: 30px;
+  position: relative;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* TEKS JUDUL STYLING */
+.teksjudul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.teksjudul div {
+  font-size: 14px;
+  color: #666;
+}
+
+.teksjudul h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* USER INFO & SEARCH */
+.search-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  width: 280px;
+}
+
+.search-box i {
+  color: #666;
+  margin-right: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  padding: 0;
+  margin-left: 5px;
+}
+
+/* ICON GROUP */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.icon-group .icon-btn {
+  color: #333;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.icon-group .icon-btn:hover {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.icon-group span {
+  font-weight: 500;
+}
+
+/* DATA IBU SECTION */
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.btn-tambah {
+  display: inline-block;
+  background-color: #7d2ae8;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+.btn-tambah:hover {
+  background-color: #5b18b2;
+}
+
+/* TABEL */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+  background: linear-gradient(135deg, #28a745, #7d2ae8);
+  color: white;
+}
+
+thead th {
+  padding: 12px 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* AKSI BUTTON */
+.actions button {
+  margin-right: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove margin on mobile */
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  .btn-tambah {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,172 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f7fc;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+html {
+    height: 100%;
+    background-image: url(images/a9796b26a77ae3fe9301.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* atau contain, tergantung kebutuhan */
+    background-position: center;
+}
+
+/* Container Form */
+.form-container {
+  max-width: 500px;
+  width: min(90%, 400px);
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: 800px;
+  
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.vh-100 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Judul */
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Input */
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Tombol */
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Link ke register */
+.link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 0.6rem;
+    color: #999;
+    font-weight: 500;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s ease all;
+    background: white;
+    padding: 0 0.3rem;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .form-container {
+    margin-left: 0; /* Hapus margin besar di desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.3rem;
+  }
+
+  form input[type="email"],
+  form input[type="password"],
+  form button {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body,
+  html {
+    background-image: none; /* Hilangkan background agar lebih ringan */
+    background-color: #f4f7fc;
+  }
+
+  .form-container {
+    box-shadow: none;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+  }
+}
+

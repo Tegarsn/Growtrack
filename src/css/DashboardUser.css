@@ -1,0 +1,314 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sidebar {
+  width: 230px;
+  background-color: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+}
+
+.sidebar nav li a {
+  text-decoration: none;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.icon-group i {
+  font-size: 16px;
+  color: #333;
+}
+
+.dashboard-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.upload-section {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.upload-box,
+.result-box {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.upload-area {
+  margin-top: 10px;
+  padding: 20px;
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-area button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.next-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result-placeholder {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #66d57b, #7d2ae8);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.ibu {
+  background: linear-gradient(135deg, #4cd964, #7d2ae8);
+}
+
+.card.anak {
+  background: linear-gradient(135deg, #33cc33, #9966ff);
+}
+.search-box {
+  display: flex;
+  margin-bottom: 10px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: 50px;
+}
+
+.search-box input {
+  padding: 8px;
+  flex: 1;
+}
+
+.search-box button {
+  padding: 8px;
+  border: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .upload-section {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .upload-box,
+  .result-box {
+    padding: 15px;
+  }
+
+  .upload-area {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .sidebar nav li a {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .topbar {
+    font-size: 13px;
+  }
+
+  .dashboard-content h1 {
+    font-size: 20px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .icon-group i {
+    font-size: 14px;
+  }
+
+  .upload-area {
+    font-size: 14px;
+  }
+
+  .upload-area button,
+  .next-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .card {
+    font-size: 14px;
+  }
+}
