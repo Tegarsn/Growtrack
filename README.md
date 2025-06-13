@@ -23,4 +23,5 @@ Aplikasi ini mudah digunakan, cukup login lalu pilih fitur yang ingin digunakan.
 
 > **(Opsional)** Tambahkan tautan ke demo jika ada (contoh: link ke deploy Vercel, Render, Railway, dll)
 ```bash
+```bash npm install
 Coming soon...
