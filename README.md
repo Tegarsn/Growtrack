@@ -30,6 +30,7 @@ akses file userlogin.txt untuk mendapatkan username dan password karena fitur si
 3. dwonload repositri untuk API :
    https://github.com/Tegarsn/API_Growtrack.git
    karena untuk api kami menggunakan ngrok untuk melakukan hosting disitu terdapat file mysql juga
+4. selalu jalankan ngrox di api tersebut dan perhatikan untuk login.js untuk selalu perbarui URL
 🔍 Demo
 Coming soon...
 
