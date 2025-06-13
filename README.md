@@ -20,6 +20,7 @@ Aplikasi ini mudah digunakan — cukup login, lalu pilih fitur yang ingin diguna
 ---
 
 ## 🚀 Cara Menjalankan
+akses file userlogin.txt untuk mendapatkan username dan password karena fitur sign up
 
 1. Pastikan sudah menginstal [Node.js](https://nodejs.org/)
 2. Clone repositori ini:
