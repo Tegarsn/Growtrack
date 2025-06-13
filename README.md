@@ -12,18 +12,36 @@
 ## 🎯 Deskripsi
 
 **Growtrack** adalah aplikasi berbasis Node.js yang menyediakan dua fitur utama:
-- **GrowEat**: Pengecekan standar makanan sehat (nutrisi & porsi)
-- **GrowCheck**: Pengecekan tinggi badan berdasarkan usia anak
+- **GrowEat**: Pengecekan standar makanan sehat (nutrisi & porsi) melalui foto
+- **GrowCheck**: Pengecekan tinggi badan berdasarkan foto 
 
-Aplikasi ini mudah digunakan, cukup login lalu pilih fitur yang ingin digunakan.
+Aplikasi ini mudah digunakan — cukup login, lalu pilih fitur yang ingin digunakan.
 
 ---
 
-## 🔍 Demo
+## 🚀 Cara Menjalankan
 
-> **(Opsional)** Tambahkan tautan ke demo jika ada (contoh: link ke deploy Vercel, Render, Railway, dll)
-```bash
-npm install
-npm start
+1. Pastikan sudah menginstal [Node.js](https://nodejs.org/)
+2. Clone repositori ini:
+   ```bash
+   git clone https://github.com/Tegarsn/Growtrack.git
+   cd Growtrack
+   
+🔍 Demo
 Coming soon...
 
+🛠️ Status Pengembangan
+Fitur yang tersedia:
+
+✅ Login
+
+✅ Pengecekan makanan sehat (GrowEat)
+
+✅ Pengukuran tinggi badan (GrowCheck)
+
+Fitur yang sedang dalam tahap pengembangan:
+
+🔄 Pencatatan hasil pengecekan
+
+🔄 Riwayat pengguna
+🔄 Klasifikasi stunting berdasarkan riwayat pengecekan
