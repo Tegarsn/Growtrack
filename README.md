@@ -23,13 +23,17 @@ Aplikasi ini mudah digunakan — cukup login, lalu pilih fitur yang ingin diguna
 akses file userlogin.txt untuk mendapatkan username dan password karena fitur sign up
 
 1. Pastikan sudah menginstal [Node.js](https://nodejs.org/)
-2. Clone repositori ini:
+2. dwonload repositori ini:
    ```bash
    git clone https://github.com/Tegarsn/Growtrack.git
    cd Growtrack
-   
+3. dwonload repositri untuk API :
+   https://github.com/Tegarsn/API_Growtrack.git
+   karena untuk api kami menggunakan ngrok untuk melakukan hosting disitu terdapat file mysql juga
 🔍 Demo
 Coming soon...
+
+
 
 🛠️ Status Pengembangan
 Fitur yang tersedia:
