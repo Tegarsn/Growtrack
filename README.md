@@ -32,7 +32,7 @@ akses file userlogin.txt untuk mendapatkan username dan password karena fitur si
    karena untuk api kami menggunakan ngrok untuk melakukan hosting disitu terdapat file mysql juga
 4. selalu jalankan ngrox di api tersebut dan perhatikan untuk login.js untuk selalu perbarui URL
 🔍 Demo
-Coming soon...
+Hosting URL: https://growtrack-app.web.app
 
 
 
