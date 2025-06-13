@@ -10,7 +10,7 @@ if (currentPath.includes('dashboard.html')) {
   import('./css/dataibu.css');
 } else if (currentPath.includes('dataanak.html')) {
   import('./css/dataanak.css');
-} else if (currentPath.includes('landingpage.html')) {
+} else if (currentPath.includes('index.html')) {
   import('./css/landingpage.css');
 } else if (currentPath.includes('login.html')) {
   import('./css/login.css');

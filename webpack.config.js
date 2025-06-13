@@ -58,8 +58,8 @@ module.exports = {
       template: './src/page/adminpage/datalayananibu.html'
     }),
     new HtmlWebpackPlugin({
-        filename: 'landingpage.html',
-        template: './src/page/home/landingpage.html',
+        filename: 'index.html',
+        template: './src/page/home/index.html',
     }),
     new HtmlWebpackPlugin({
       filename: 'login.html',
